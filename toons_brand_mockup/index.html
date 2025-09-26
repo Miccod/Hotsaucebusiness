@@ -216,7 +216,7 @@
           <li><strong>Instagram:</strong> @toons_sauces</li>
           <li><strong>Location:</strong> Vancouver, BC</li>
         </ul>
-      </div>
+        <div class="cart-ui">
       <form class="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-ok').classList.add('show'); this.reset();">
         <label>Name<input type="text" required></label>
         <label>Email<input type="email" required></label>
@@ -244,5 +244,11 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- Example Checkout Button -->
+<div class="cart-ui">
+  <button id="checkout-button" class="btn btn-primary btn-sm">
+    🛒 Checkout
+  </button>
+</div>
 </body>
 </html>
