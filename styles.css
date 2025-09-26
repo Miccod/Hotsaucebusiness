@@ -1,0 +1,105 @@
+/* -------- Design tokens aligned to chili red / warm orange brand vibe -------- */
+:root{
+  --bg: #0f0f11;
+  --panel: #141417;
+  --text: #e9eaee;
+  --muted: #acb0b9;
+  --accent: #ff3b30;           /* chili red */
+  --accent-2: #ff7a59;         /* warm orange */
+  --ring: rgba(255,122,89,.45);
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font-family:Outfit,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--text); background:radial-gradient(1200px 800px at 70% -20%, #431312 0%, #151316 45%, #0f0f11 100%); line-height:1.6; letter-spacing:.15px;}
+img{max-width:100%; display:block}
+.container{width:min(1100px, 92%); margin:0 auto}
+.site-header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(120%) blur(10px); background:rgba(15,15,17,.55); border-bottom:1px solid rgba(255,255,255,.06)}
+.site-header .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+.logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:700}
+.logo img{width:28px; height:28px}
+.site-header nav{display:flex; gap:14px; align-items:center}
+.site-header nav a{color:var(--muted); text-decoration:none; font-weight:500}
+.site-header nav a:hover{color:var(--text)}
+.btn{border:none; border-radius:999px; padding:12px 18px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:white; box-shadow:0 10px 20px rgba(255,59,48,.25)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.15)}
+.hero{padding:72px 0 40px}
+.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center}
+.eyebrow{color:var(--accent-2); font-weight:700; text-transform:uppercase; letter-spacing:.2em; font-size:.78rem}
+.hero h1{font-family:"Playfair Display",serif; font-size:clamp(36px,5vw,64px); line-height:1.05; margin:.25em 0}
+.hero h1 .accent{background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero p{color:var(--muted); font-size:1.05rem}
+.hero .cta-row{display:flex; gap:12px; margin:18px 0 8px}
+.trust{display:flex; align-items:center; gap:12px; margin-top:10px; color:var(--muted); font-size:.95rem}
+.trust img{width:28px; opacity:.9}
+.hero-art{position:relative; height:380px}
+.bottle{position:absolute; bottom:0; width:140px; height:340px; border-radius:18px; box-shadow:var(--shadow), inset 0 0 0 1px rgba(255,255,255,.08)}
+.bottle-1{left:6%; background:linear-gradient(#2b0f0f,#5b1919)}
+.bottle-2{left:38%; transform:translateY(-8px) rotate(-3deg); background:linear-gradient(#23140e,#4a2c1f)}
+.bottle-3{left:70%; transform:translateY(8px) rotate(3deg); background:linear-gradient(#2a0b10,#651929)}
+@media (max-width: 860px){ .hero-grid{grid-template-columns:1fr} .hero-art{order:-1; height:260px} .bottle{width:100px; height:240px} }
+.section{padding:64px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%)}
+.section-title{font-family:"Playfair Display",serif; font-size:clamp(28px,3.4vw,40px); margin:0 0 4px}
+.section-subtitle{color:var(--muted); margin:0 0 22px}
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.card{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.card-img{padding:22px 22px 0; display:flex; align-items:end; justify-content:center; height:220px; border-bottom:1px solid rgba(255,255,255,.06)}
+.card-body{padding:18px}
+.card h3{margin:0 0 4px}
+.card p{margin:0 0 8px; color:var(--muted)}
+.tags{display:flex; gap:8px; list-style:none; padding:0; margin:10px 0 14px}
+.tags li{font-size:.8rem; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08)}
+.card-cta{display:flex; align-items:center; justify-content:space-between}
+.price{font-weight:800; font-size:1.1rem}
+.btn-sm{padding:9px 14px; font-size:.9rem}
+.bg-amber{background:linear-gradient(180deg, rgba(191,91,4,.25), transparent 60%)}
+.bg-cherry{background:linear-gradient(180deg, rgba(177,19,42,.25), transparent 60%)}
+.bg-smoke{background:linear-gradient(180deg, rgba(90,62,54,.25), transparent 60%)}
+@media (max-width:900px){ .cards{grid-template-columns:1fr} .card-img{height:200px}}
+.strip.metrics{background:rgba(255,255,255,.03); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06)}
+.metrics-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; padding:12px 0}
+.metrics-grid > div{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); padding:14px; border-radius:12px; text-align:center}
+.metrics-grid strong{display:block; font-size:1rem}
+.metrics-grid span{color:var(--muted); font-size:.9rem}
+@media (max-width:900px){ .metrics-grid{grid-template-columns:1fr 1fr}}
+.logo-row{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:center}
+.logo{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:14px; display:flex; align-items:center; justify-content:center; height:80px}
+.logo img{opacity:.9}
+.note{color:var(--muted); margin-top:10px}
+@media (max-width:900px){ .logo-row{grid-template-columns:1fr 1fr}}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center}
+.chef-card{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.chef-img{height:220px; background:linear-gradient(135deg, rgba(255,59,48,.35), rgba(255,122,89,.2)), url('assets/chef-placeholder.svg') center/cover no-repeat}
+.chef-copy{padding:16px}
+.checklist{list-style:none; padding:0; margin:14px 0 0}
+.checklist li{padding-left:28px; position:relative; margin:8px 0}
+.checklist li::before{content:'✓'; position:absolute; left:0; top:0; color:#ff7a59}
+@media (max-width:900px){ .split{grid-template-columns:1fr}}
+.testimonials{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+blockquote{margin:0; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); padding:16px; border-radius:14px; font-style:italic}
+blockquote cite{display:block; color:var(--muted); margin-top:8px; font-style:normal}
+@media (max-width:900px){ .testimonials{grid-template-columns:1fr}}
+.cta{background:radial-gradient(800px 500px at 50% 0%, rgba(255,59,48,.15), transparent 60%)}
+.cta-inner{text-align:center}
+.cart{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:14px 0}
+.cart label{display:flex; flex-direction:column; gap:6px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); padding:12px 14px; border-radius:12px; min-width:200px}
+.cart select, .cart input{background:#0b0b0d; color:var(--text); border:1px solid rgba(255,255,255,.1); padding:10px; border-radius:10px; outline-color:rgba(255,122,89,.45)}
+.cart-ui{margin-top:10px; display:grid; gap:8px; justify-items:center}
+.cart-item{display:flex; gap:10px; align-items:center; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); padding:10px 12px; border-radius:12px}
+.cart-item .badge{background:rgba(255,255,255,.08); padding:4px 8px; border-radius:999px; font-size:.85rem}
+.micro{color:var(--muted); font-size:.9rem}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start}
+.contact-list{list-style:none; padding:0; margin:0; color:var(--muted)}
+.contact-form label{display:flex; flex-direction:column; gap:8px; margin-bottom:10px}
+.contact-form input, .contact-form textarea{background:#0b0b0d; color:var(--text); border:1px solid rgba(255,255,255,.1); padding:12px; border-radius:12px; outline-color:rgba(255,122,89,.45)}
+.form-ok{opacity:0; transition:.2s ease; color:#b7ffb3; margin:8px 0 0}
+.form-ok.show{opacity:1}
+.site-footer{border-top:1px solid rgba(255,255,255,.06); padding:24px 0 36px; background:rgba(0,0,0,.35)}
+.foot{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.foot-brand{display:flex; align-items:center; gap:10px; font-weight:800}
+.foot-links{display:flex; gap:14px}
+.copyright{color:var(--muted); font-size:.95rem}
