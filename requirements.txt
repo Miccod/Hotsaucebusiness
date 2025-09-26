@@ -1,0 +1,4 @@
+flask 
+stripe
+phython-dotenv
+sqlalchemy
